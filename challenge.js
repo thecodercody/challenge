@@ -1,18 +1,10 @@
-var results = [];
-var arr = [1,2,3,4,5,6,7,8,9,10]
-
-var recursor = function (i) {
-  if(i === arr.length) {
-    return results;
+var recursor = function(arr){
+  if(arr.length === 0){
+    return arr;
+  }  
+  if(arr[0] % 2 === 0){
+    return [arr[0]].concat(recursor(arr.slice(1)));
   } else {
-    if(arr[i] % 2 === 0){
-      results.push(arr[i]);
-    }
+    return recursor(arr.slice(1));
   }
-
-  recursor(i + 1);
-
 }
-
-recursor(0);
-console.log(results);
