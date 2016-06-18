@@ -1,0 +1,41 @@
+body {
+  background: url('../img/EDSsiteBg.png') no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.growOnHover {
+  margin-top: 30%;
+  margin-left: 25%;
+  transition: all .2s ease-in-out;
+}
+
+.growOnHover:hover {
+  transform: scale(1.1);
+}
+
+input {
+  float: right;
+}
+
+p {
+  text-align: center;
+}
+
+li {
+  float: right;
+}
+/* Extra small devices (portrait phones, less than 34em)
+   No media query since this is the default in Bootstrap
+
+Small devices (landscape phones, 34em and up) */
+@media (min-width: 34em) {  }
+
+/* Medium devices (tablets, 48em and up) */
+@media (min-width: 48em) {  }
+
+/* Large devices (desktops, 62em and up) */
+@media (min-width: 62em) {  }
+
+/* Extra large devices (large desktops, 75em and up) */
+@media (min-width: 75em) {  }
