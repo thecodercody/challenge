@@ -1,54 +1,41 @@
 <div class="row">
-  <div class="col-xs-4"></div>
-  <div class="col-xs-4">
+  <div class="col-xs-9">
     <form>
+      <label>Enter ID Number for Delete and Update; Leave Blank for New Employee</label><br>
       <label>Employee ID:</label>
-      <input type="text" />
+      <input id="_id" class="userInput" type="text" />
       <br>
 
       <label>First Name:</label>
-      <input type="text" />
+      <input id="fName" class="userInput" type="text" />
       <br>
 
       <label>Last Name:</label>
-      <input type="text" />
+      <input id="lName" class="userInput" type="text" />
       <br>
 
       <label>Phone Number:</label>
-      <input type="text" />
+      <input id="tel" class="userInput" type="text" />
       <br>
 
       <label>Email Address:</label>
-      <input type="text" />
+      <input id="email" class="userInput" type="text" />
       <br>
-
-      <input id="update" type="submit" value="Update"/>
+      <a href="/database">
+        <input id="create" type="submit" value="Create New" onClick="window.location.reload()"/>
+        <input id="delete" type="submit" value="Delete" onClick="window.location.reload()"/>
+        <input id="update" type="submit" value="Update" onClick="window.location.reload()"/>
+      </a>
     </form>
   </div>
 </div>
-<div class="row">
+<div id="bottomRow" class="row">
   <div class="col-xs-4"></div>
-  <div class="col-xs-4">
-    <p>
-    Last Name Search:
-    <br>
-    <input id="search" type="search" ng-model="q.lName" placeholder="ex. Johnson" aria-label="find employee" />
-        <ul class="employeeList" ng-if="q.lName">
-          <br>
-          <li class="employees" ng-repeat="employees in employeeList | filter:q as results">
-            <a href="/details"><strong>{{ employees.lName }}, {{ employees.fName }}</strong></a>
-          </li>
-          <br>
-          <li ng-if="results.length == 0">
-            <strong>No results found...</strong>
-          </li>
-        </ul>
-    </p>
+  <div class="col-xs-8">  
+    <h6>ID: <span>{{ id }}</span></h6><br>
+    <h6>First Name: <span>{{ fName }}</span></h6><br>
+    <h6>Last Name: <span>{{ lName }}</span></h6><br>
+    <h6>Phone Number: <span>{{ tel }}</span></h6><br>
+    <h6>Email Address: <span>{{ email }}</span></h6><br>
   </div>
-</div>
-<div class="row">
-  <h2>First Name: <span>{{ fName }}</span></h2><br>
-  <h2>Last Name: <span>{{ lName }}</span></h2><br>
-  <h2>Phone Number: <span>{{ tel }}</span></h2>
-  <h2>Email Address: <span>{{ email }}</span></h2>
 </div>

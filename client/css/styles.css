@@ -23,7 +23,23 @@ p {
 }
 
 li {
-  float: right;
+  float: left;
+}
+
+h6 {
+  color: blue;
+}
+
+#search {
+  float: left;
+}
+
+.userInput {
+  width: 50vw;
+}
+
+#bottomRow {
+  margin-top: 170px;
 }
 /* Extra small devices (portrait phones, less than 34em)
    No media query since this is the default in Bootstrap

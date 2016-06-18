@@ -6,6 +6,10 @@
     "mongoose": "*",
     "body-parser": "~1.0.1",
     "method-override": "~2.3.6",
-    "path": "~0.12.7"
+    "path": "~0.12.7",
+    "jsonwebtoken": "~7.0.1",
+    "passport": "~0.3.2",
+    "passport-local": "~1.0.0",
+    "express-jwt": "~3.4.0"
   }
 }

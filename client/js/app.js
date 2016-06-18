@@ -6,7 +6,11 @@ angular.module('employeeDatabase', ['ngRoute'])
 })
 
 .controller('MainCtrl', ['$scope', function($scope){
-  
+  $scope.enterPassword = function(){
+    var password = prompt('Enter Password:');
+    
+  };
+ 
 }])
 
 
@@ -37,21 +41,6 @@ angular.module('employeeDatabase', ['ngRoute'])
       }
     });
   };
-
-  var employee;
-
-  $("#update").on('click', function(){
-     if(!employee){
-       alert('Please select an employee');
-     } else {
-       $.ajax({
-        url: "http://employeedatastorage.com/api/employees/" + employee,
-        type: "POST",
-        contentType: 'application/json'
-       })
-     }
-  })
- 
 
 }])
 
